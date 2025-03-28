@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  nginx: 
+    build: 
+      context: .
+      dockerfile: .docker/nginx/Dockerfile
+    volumes:
+      - C:/Users/rodri/Desktop/tekmplate-docker-php-main/src:/var/www/html  # Caminho absoluto correto
+    image: nginx:alpine
+    ports:
+      - '8080:80'
+    networks:
+      - internal
+
+  php:
+    volumes:
+      - C:/Users/rodri/Desktop/tekmplate-docker-php-main/src:/var/www/html  # Caminho absoluto correto
+    image: php:fpm-alpine
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
