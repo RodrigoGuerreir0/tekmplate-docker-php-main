@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: .docker/nginx/Dockerfile
     volumes:
-      - C:/Users/rodri/Desktop/tekmplate-docker-php-main/src:/var/www/html  # Caminho absoluto correto
+      - C:/Users/rodri/Desktop/tekmplate-docker-php-main/src:/var/www/html 
     image: nginx:alpine
     ports:
       - '8080:80'
@@ -14,7 +14,7 @@ services:
 
   php:
     volumes:
-      - C:/Users/rodri/Desktop/tekmplate-docker-php-main/src:/var/www/html  # Caminho absoluto correto
+      - C:/Users/rodri/Desktop/tekmplate-docker-php-main/src:/var/www/html
     image: php:fpm-alpine
     networks:
       - internal

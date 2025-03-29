@@ -1,5 +1,11 @@
 <?php
-// require 'vendor/autoload.php';
+require 'vendor/autoload.php';
+ 
+use Doctrine\ORM\Tools\Console\ConsoleRunner;
+use Doctrine\ORM\Tools\Console\EntityManagerProvider\SingleManagerProvider;
 
-echo'Hello Word';
+require  'bootstrap.php';
+
+
+
 
